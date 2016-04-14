@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.Structures"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arrays allow to define type of variables that can hold several data items of the same kind. Similarly structure is another user defined data type available in C that allows to combine data items of different kinds.  Structures are used to represent a record. Suppose you want to keep track of your books in a library. You might want to track the following attributes about each book −  \n1)Title\n 2)Author\n 3)Subject\n 4)Book\n 5)ID\n"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Defining a Structure"
+        android:textColor="#1502ff"
+        android:id="@+id/textView3" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0006"
+        android:text="To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member. The format of the struct statement is as follows −
+
+\nstruct [structure tag] {
+
+   \nmember definition;
+   \nmember definition;
+   \n...
+   \nmember definition;
+\n} [one or more structure variables];
+\nThe structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure −
+
+ \nstruct Books {
+   \nchar  title[50];
+   \nchar  author[50];
+   \nchar  subject[100];
+   \nint   book_id;
+\n} book;
+"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:textStyle="bold"
+        android:textColor="#1502ff"
+        android:text="Accessing Structure Members"/>
+    <TextView
+        android:textColor="#ff0006"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use the keyword struct to define variables of structure type. The following example shows how to use a structure in a program −
+
+\n#include &lt;stdio.h&gt;
+\n#include &lt;string.h&gt;
+
+\nstruct Books {
+  \n char  title[50];
+   \nchar  author[50];
+   \nchar  subject[100];
+   \nint   book_id;
+\n};
+
+\n\nint main( ) {
+
+   \n\nstruct Books Book1;        /* Declare Book1 of type Book */
+   \nstruct Books Book2;        /* Declare Book2 of type Book */
+
+   \n\n/* book 1 specification */
+   \nstrcpy( Book1.title, &quot;C Programming&quot;);
+   \nstrcpy( Book1.author, &quot;Nuha Ali&quot;);
+   \nstrcpy( Book1.subject, &quot;C Programming Tutorial&quot;);
+   \nBook1.book_id = 6495407;
+
+   \n\n/* book 2 specification */
+   \nstrcpy( Book2.title, &quot;Telecom Billing&quot;);
+   \nstrcpy( Book2.author, &quot;Zara Ali&quot;);
+   \nstrcpy( Book2.subject, &quot;Telecom Billing Tutorial&quot;);
+   \nBook2.book_id = 6495700;
+
+   \n\n/* print Book1 info */
+   \nprintf( &quot;Book 1 title : %s\\n&quot;, Book1.title);
+    \nprintf( &quot;Book 1 author : %s\\n&quot;, Book1.author);
+    \nprintf( &quot;Book 1 subject : %s\\n&quot;, Book1.subject);
+    \nprintf( &quot;Book 1 book_id : %d\\n&quot;, Book1.book_id);
+
+    \n\n/* print Book2 info */
+    \nprintf( &quot;Book 2 title : %s\\n&quot;, Book2.title);
+    \nprintf( &quot;Book 2 author : %s\\n&quot;, Book2.author);
+    \nprintf( &quot;Book 2 subject : %s\\n&quot;, Book2.subject);
+    \nprintf( &quot;Book 2 book_id : %d\\n&quot;, Book2.book_id);
+
+    \n\nreturn 0;
+    \n}
+    \nWhen the above code is compiled and executed, it produces the following result −
+
+    \n\nBook 1 title : C Programming
+    \nBook 1 author : Nuha Ali
+    \nBook 1 subject : C Programming Tutorial
+    \nBook 1 book_id : 6495407
+    \nBook 2 title : Telecom Billing
+    \nBook 2 author : Zara Ali
+    \nBook 2 subject : Telecom Billing Tutorial
+    \nBook 2 book_id : 6495700"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:textStyle="bold"
+        android:textColor="#1502ff"
+        android:text="Structures as Function Arguments"/>
+    <TextView
+        android:textColor="#ff0006"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can pass a structure as a function argument in the same way as you pass any other variable or pointer.
+
+\n#include &lt;stdio.h&gt;
+\n#include &lt;string.h&gt;
+
+\n\nstruct Books {
+   \nchar  title[50];
+   \nchar  author[50];
+   \nchar  subject[100];
+   \nint   book_id;
+\n};
+
+\n/* function declaration */
+\nvoid printBook( struct Books book );
+
+\n\nint main( ) {
+
+   \nstruct Books Book1;        /* Declare Book1 of type Book */
+   \nstruct Books Book2;        /* Declare Book2 of type Book */
+
+   \n/* book 1 specification */
+   \nstrcpy( Book1.title, &quot;C Programming&quot;);
+   \nstrcpy( Book1.author, &quot;Nuha Ali&quot;);
+   \nstrcpy( Book1.subject, &quot;C Programming Tutorialv);
+   \nBook1.book_id = 6495407;
+
+   \n\n/* book 2 specification */
+   \nstrcpy( Book2.title, &quot;Telecom Billing&quot;);
+   \nstrcpy( Book2.author, &quot;Zara Ali&quot;);
+   \nstrcpy( Book2.subject, &quot;Telecom Billing Tutorial&quot;);
+   \nBook2.book_id = 6495700;
+
+   \n\n/* print Book1 info */
+   \nprintBook( Book1 );
+
+   \n\n/* Print Book2 info */
+   \nprintBook( Book2 );
+
+   \nreturn 0;
+\n}
+
+\nvoid printBook( struct Books book ) {
+
+   \nprintf( &quot;Book title : %s\\n&quot;, book.title);
+    \nprintf( &quot;Book author : %s\\n&quot;, book.author);
+    \nprintf( &quot;Book subject : %s\\n&quot;, book.subject);
+    \nprintf( &quot;Book book_id : %d\\n&quot;, book.book_id);
+    \n}
+    \nWhen the above code is compiled and executed, it produces the following result −
+
+    \n\nBook title : C Programming
+    \nBook author : Nuha Ali
+    \nBook subject : C Programming Tutorial
+    \nBook book_id : 6495407
+    \nBook title : Telecom Billing
+    \nBook author : Zara Ali
+    \nBook subject : Telecom Billing Tutorial
+    \nBook book_id : 6495700"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Go to Quiz"
+    android:onClick="start6"/>
+</LinearLayout>
+</ScrollView>

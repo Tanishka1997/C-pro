@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.Quiz5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <TextView
+        android:textColor="#ff0359"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Which of the following are themselves a collection of different data types?"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclickRadio51"
+            android:id="@+id/a51"
+            android:text="string"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="structures"
+            android:onClick="onclickRadio51"
+            android:id="@+id/b51"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="char"
+            android:onClick="onclickRadio51"
+            android:id="@+id/c51"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All of the mentioned"
+            android:onClick="onclickRadio51"
+            android:id="@+id/d51"/>
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0359"
+        android:text="\nWhat is the output of this C code?
+
+    \n#include &lt;stdio.h&gt;
+    \nstruct student
+    \n{
+    \n   int no;
+    \n    char name[20];
+   \n }
+    \nvoid main()
+    \n{
+  \n  struct student s;
+    \n s.no = 8;
+     \nprintf(&quot;hello&quot;);
+    \n}"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclickRadio52"
+            android:id="@+id/a52"
+            android:text="Compile time error"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nothing"
+            android:onClick="onclickRadio52"
+            android:id="@+id/b52"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello"
+            android:onClick="onclickRadio52"
+            android:id="@+id/c52"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Varies"
+            android:onClick="onclickRadio52"
+            android:id="@+id/d52"/>
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Continue"
+        android:text="Continue To Home"/>
+
+</LinearLayout>
+</ScrollView>

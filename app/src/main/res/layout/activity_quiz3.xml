@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.quiz3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <TextView
+        android:textColor="#ff0359"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is the output of this C code?
+
+    \n#include &lt;stdio.h&gt;
+    \nint main()
+    \n{
+    \n    void foo();
+    \n    printf(&quot;1 &quot;);
+    \nfoo();
+    \n}
+    \nvoid foo()
+    \n{
+    \nprintf(&quot;2 &quot;);
+    \n}"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclickRadio31"
+            android:id="@+id/a31"
+
+            android:text="1 2"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compile time error"
+            android:onClick="onclickRadio31"
+            android:id="@+id/b31"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 2 1 2"
+            android:onClick="onclickRadio31"
+            android:id="@+id/c31"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depends on the compiler"
+            android:onClick="onclickRadio31"
+            android:id="@+id/d31"/>
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="#ff0359"
+        android:layout_height="wrap_content"
+        android:text="\nWhat is the output of this C code?
+
+    \n#include &lt;stdio.h&gt;
+    \nint main()
+    \n{
+      \n  void foo(), f();
+        \nf();
+    \n}
+    \nvoid foo()
+    \n{
+      \n  printf(&quot;2 &quot;);
+    \n}
+    \nvoid f()
+    \n{
+    \nprintf(&quot;1 &quot;);
+    \nfoo();
+    \n}"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclickRadio32"
+            android:id="@+id/a32"
+            android:text="Compile time error as foo is local to main"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 2"
+            android:onClick="onclickRadio32"
+            android:id="@+id/b32"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 1"
+            android:onClick="onclickRadio32"
+            android:id="@+id/c32"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compile time error due to declaration of functions inside main"
+            android:onClick="onclickRadio32"
+            android:id="@+id/d32"/>
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0359"
+        android:text="What is the output of this C code?
+
+    \n#include &lt;stdio.h&gt;
+    \nint main()
+    \n{
+      \n  void foo();
+        \nvoid f()
+        \n{
+        \n    foo();
+        \n}
+        \nf();
+    \n}
+    \nvoid foo()
+    \n{
+      \n  printf(&quot;2 &quot;);
+    \n}
+    "/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclickRadio33"
+            android:id="@+id/a33"
+            android:text="2 2"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:onClick="onclickRadio33"
+            android:id="@+id/b33"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compile time error"
+            android:onClick="onclickRadio33"
+            android:id="@+id/c33"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depends on the compiler"
+            android:onClick="onclickRadio33"
+            android:id="@+id/d33"/>
+
+    </RadioGroup>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Continue"
+        android:text="Continue"/>
+
+
+</LinearLayout>
+</ScrollView>

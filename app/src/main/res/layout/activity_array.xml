@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.Array"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.
+
+All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:textStyle="bold"
+        android:textColor="#1502ff"
+        android:text="DECLARING ARRAYS"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To declare an array we need to specify about the name and size of the array lik:\n"/>
+    <TextView
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:text="\ntype arrayName [ arraySize ];
+\nThis is called a single-dimensional array. The arraySize must be an integer constant greater than zero and type can be any valid C data type. For example, to declare a 10-element array called balance of type double, use this statement −
+
+\ndouble balance[10];
+\nHere balance is a variable array which is sufficient to hold up to 10 double numbers."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INITIALIZING ARRAYS"
+        android:textColor="#1502ff"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The array can be initialized in C like:\n\n double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};\n The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].
+
+If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write −\n
+
+\ndouble balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};\n
+\nYou will create exactly the same array as you did in the previous example. Following is an example to assign a single element of the array −
+
+\nbalance[4] = 50.0;\n"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#1502ff"
+        android:textSize="20sp"
+        android:text="Acessing Array Elements"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0006"
+        android:text="An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example −
+
+\n double salary = balance[9];
+\n The above statement will take the 10th element from the array and assign the value to salary variable. The following example Shows how to use all the three above mentioned concepts viz. declaration, assignment, and accessing arrays −
+
+\n #include &lt;stdio.h&gt;
+
+\n int main () {
+
+  \n int n[ 10 ]; /* n is an array of 10 integers */
+  \n int i,j;
+
+  \n /* initialize elements of array n to 0 */
+  \n for ( i = 0; i &lt; 10; i++ ) {
+   \n   n[ i ] = i + 100; /* set element at location i to i + 100 */
+   \n }
+
+   \n /* output each array element's value */
+   \n for (j = 0; j &lt; 10; j++ ) {
+     \n printf(&quot;Element[%d] = %d\\n&quot;, j, n[j] );
+   \n }
+
+    \n return 0;
+    \n }
+   \n  When the above code is compiled and executed, it produces the following result −\n
+
+   \n Element[0] = 100
+   \n Element[1] = 101
+   \n Element[2] = 102
+   \n Element[3] = 103
+   \n Element[4] = 104
+   \n Element[5] = 105
+   \n Element[6] = 106
+   \n Element[7] = 107
+   \n Element[8] = 108
+   \n Element[9] = 109"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Go To Quiz"
+    android:onClick="start5"/>
+</LinearLayout>
+    </ScrollView>

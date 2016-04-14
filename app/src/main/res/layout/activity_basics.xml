@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.Basics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fillViewport="false">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <TextView
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1502ff"
+        android:text="INTRODUCTION"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+       android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:text="Before we embark on a brief tour of C&apos;s basic syntax and structure we offer a brief history of C and consider the characteristics of the C language. In the remainder of the Chapter we will look at the basic aspects of C programs such as C program structure, the declaration of variables, data types and operators. We will assume knowledge of a high level language, such as PASCAL.  It is our intention to provide a quick guide through similar C principles to most high level languages. Here the syntax may be slightly different but the concepts exactly the same."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1502ff"
+        android:text="Main Function in C"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_height="wrap_content"
+        android:text="There must be at least one function in any C source code. This is called as Main() and is a mandetory requirement of C language. This is the entry point of any C program. From main() function the code execution flows as per the programmer’s chosen custom functions. There may or may not be other functions written by user in a program."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingLeft="16dp"
+        android:textColor="#1502ff"
+        android:paddingRight="16dp"
+        android:text="Basic C Strucuture"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_height="wrap_content"
+        android:text="A sample C Program template can be as simple as below. The famous is the famous -Hello World, program among the people interested to learn this language.\n "/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hello_world"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="VARIABLES"
+        android:textColor="#1502ff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+
+\n The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types −
+
+\n\n Type	     Description
+\n\n char-	   Typically a single octet(one byte). This is an integer type.
+\n\n int-	   The most natural size of integer for the machine.
+\n\n float-	   A single-precision floating point value.
+\n\n double-	   A double-precision floating point value.
+\n\n void-	    Represents the absence of type.
+\n\n  C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.
+
+\n\nVariable Definition in C
+\nA variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows −
+
+\n\ntype variable_list;
+\nHere, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −
+
+\n\nint    i, j, k;
+\nchar   c, ch;
+\nfloat  f, salary;
+\ndouble d;
+\nThe line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.
+
+\n\nVariables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows −
+
+\n\ntype variable_name = value;
+\nSome examples are −
+
+\n\n extern int d = 3, f = 5;    // declaration of d and f.
+\nint d = 3, f = 5;           // definition and initializing d and f.
+\nbyte z = 22;                // definition and initializes z.
+\nchar x = 'x';               // the variable x has the value 'x'.
+\n\nFor definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables are undefined.
+
+\n\nVariable Declaration in C
+\nA variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable declaration has its meaning at the time of compilation only, the compiler needs actual variable declaration at the time of linking the program.
+
+\nA variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code."/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+        android:textColor="#1502ff"
+        android:textStyle="bold"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:text="C Variable Scope"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="By the scope of variables in c, we mean that from which parts of the program any particular variable could be accessed. Thus, depending on the scope of variables in c language, variables could be classified as follows:\n 1-Global Scope \n 2-Local Scope"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#1502ff"
+        android:text="Local Scope"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#ff0006"
+        android:text="Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. The following example shows how local variables are used. Here all the variables a, b, and c are local to main() function.
+        \n#include &lt;stdio.h&gt;
+
+\nint main () {
+
+  \n/* local variable declaration */
+  \nint a, b;
+  \nint c;
+
+  \n/* actual initialization */
+  \na = 10;
+  \nb = 20;
+  \nc = a + b;
+
+  \nprintf (&quot;value of a = %d, b = %d and c = %d\\n&quot;, a, b, c);
+
+    \nreturn 0;
+    \n}"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#1502ff"
+        android:text="Global Scope"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:textColor="#ff0006"
+        android:paddingRight="16dp"
+        android:text="Global variables in c have their declaration outside the function definition of all functions used with in the program and remains in the memory as long as the program is executing.
+
+All global variables in c could be accessed from anywhere in program which means that any expression in the program can access the global variable regardless of what block that expression is written.
+
+Thus, the global variables have their scope global.For example:\n
+\n /*Program to illustrate c global variables*/
+\n #include &lt; stdio.h &gt;
+\n int a=5;
+\n main()
+\n {
+    \n ++a;
+    \n printf(&quot; %d\\n &quot;,a);
+    \n increment();
+    \n return 0;
+    \n }
+    \n void increment()
+    \n {
+    \n ++a;
+    \n printf(&quot;%d\\n&quot;,a);
+    \n }
+    \nOutput:\n
+6\n
+7\n"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Go To Quiz"
+    android:onClick="start1"/>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tanishka.cpro.MainActivity"
+    android:layout_width="match_parent"
+    android:background="#3a74ff02"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:weightSum="1">
+
+   <ImageView
+
+       android:layout_width="150dp"
+       android:scaleType="center"
+       android:layout_height="150dp"
+       android:src="@drawable/clogo"
+       android:layout_marginBottom="35dp"
+       android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TOPICS:"
+        android:textColor="#0007ff"
+        android:textSize="20sp"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:layout_weight="0.54" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Basics and Variable Declaration,definition and scope"
+        android:id="@+id/basic"
+        android:onClick="Basic"
+
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Operators"
+        android:onClick="operators"
+        android:id="@+id/oper"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Functions"
+        android:onClick="functions"
+        android:id="@+id/function"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrays"
+        android:id="@+id/array"
+        android:onClick="array"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Structures"
+        android:onClick="structures"
+        android:id="@+id/structure"
+        />
+
+
+</LinearLayout>
+</ScrollView>
